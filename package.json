@@ -16,7 +16,9 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.2",
     "typescript": "^4.2.3",
-    "web-vitals": "^1.0.1"
+    "web-vitals": "^1.0.1",
+    "@sdc-wob-type-3/group-ui": "https://groupui-assets.apps.emea.vwapps.io/packages/group-ui/latest/sdc-wob-type-3-group-ui.tgz",
+    "@sdc-wob-type-3/group-ui-react": "https://groupui-assets.apps.emea.vwapps.io/packages/group-ui-react/latest/sdc-wob-type-3-group-ui-react.tgz"
   },
   "scripts": {
     "start": "react-scripts start",
