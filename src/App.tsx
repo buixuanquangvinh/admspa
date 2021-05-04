@@ -6,6 +6,7 @@ import { AppContext, AppContextProvider } from 'context';
 
 function App() {
   const { appState } = useContext(AppContext)
+  appState.authed = true
   return appState.authed?<PrivateRoute/>:<PublicRoute/>
 }
 
