@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import '@sdc-wob-type-3/group-ui/dist/group-ui/assets/themes/vwag/vwag.css';
 
 ReactDOM.render(
   <React.StrictMode>
