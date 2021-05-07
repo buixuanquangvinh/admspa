@@ -5,11 +5,12 @@ import {
   GroupuiButton, 
   GroupuiCard, 
   GroupuiText, 
-  GroupuiModal,
-  GroupuiDivider
+  GroupuiModal
 } from '@sdc-wob-type-3/group-ui-react';
 // scss
 import './dashboard.scss'
+// icons
+import CAR_CRASH_24 from '../../icons/car-crash-24.svg'
 
 interface InfiniteCheckList {
   text: string
@@ -18,9 +19,16 @@ interface InfiniteCheckList {
 // List
 const CheckList:React.FC<InfiniteCheckList> = ({text}) => {
   return (
-    <div style={{display:'flex', alignItems: 'flex-start'}}>
-      <img style={{color: 'red'}} src="https://groupui-assets.apps.emea.vwapps.io/icons/vwag/check-24.svg" alt="icon-check"/>
-      <GroupuiText style={{marginLeft: 10, marginBottom: 20, fontSize: 16, fontWeight: 'bold'}}>
+    <div className="contain-center" style={{display:'flex', alignItems: 'flex-start'}}>
+      <img style={{color: 'red'}} src="https://groupui-assets.apps.emea.vwapps.io/icons/vwag/check-32.svg" alt="icon-check"/>
+      <GroupuiText
+        style={{
+          marginLeft: 18,
+          marginBottom: 20,
+          marginRight: 20,
+          fontSize: 15,
+          fontWeight: 'bold'
+        }}>
         {text}
       </GroupuiText>
     </div>
@@ -107,11 +115,20 @@ export function Dashboard() {
       >
         {/* <GroupuiDivider style={{marginTop: '25px'}} /> */}
         <div style={{textAlign: 'center', marginBottom: 20}}>
-          <img style={{marginTop: "50px"}} width="75" height="75" src="https://groupui-assets.apps.emea.vwapps.io/icons/vwag/car-crash-24.svg" alt="icon-warning" />
+          <img
+            style={{
+              marginTop: "50px"
+            }}
+            width="70"
+            height="70"
+            src={CAR_CRASH_24} alt="icon-warning"
+          />
           <GroupuiText
             style={{
-              fontSize: 36,
-              fontWeight: 'bold'
+              fontSize: 26,
+              fontWeight: 'bold',
+              color: 'var(--groupui-vwag-color-petrol-800-primary)',
+              margin: '20px 0'
             }}
           >Unfallhilfe</GroupuiText>
         </div>
@@ -125,19 +142,23 @@ export function Dashboard() {
         <CheckList text={"Kann im Falle eines schwerwiegenden Unfalls automatisch einen Notruf absetzen"}/>
 
         <GroupuiButton
-          disabled={true}
+          disabled={false}
           fullwidth={true}
           inverted={false}
           size="m"
           type="button"
           variant="primary"
+          className="contain-center"
           onClick={() => console.log('redirect')}
-          style={{marginTop: '25px'}}
+          style={{
+            marginTop: '10px',
+          }}
         >
-          <GroupuiText style={{color: 'white'}}>
-            Unfallhilfe öffnen
+          <GroupuiText className="text-common">
+            Audi Notdienst anrufen
           </GroupuiText>
         </GroupuiButton>
+
         <GroupuiButton
           disabled={false}
           fullwidth={true}
@@ -145,24 +166,51 @@ export function Dashboard() {
           size="m"
           type="button"
           variant="primary"
+          className="contain-center"
           onClick={() => console.log('redirect')}
           style={{
             marginTop: '10px',
-            marginBottom: '100px'
           }}
         >
-          <img 
-            src="https://groupui-assets.apps.emea.vwapps.io/icons/vwag/enter-24.svg"
-            alt="icon-phone"
-            style={{
-              marginRight: 'auto'
-            }}
-          />
-          <GroupuiText style={{
-            color: 'white',
-            marginRight: 'auto'
-          }}>
-            Audi Notdienst anrufen
+          <GroupuiText className="text-common">
+            Glasschaden aufnehmen
+          </GroupuiText>
+        </GroupuiButton>
+
+        <GroupuiButton
+          disabled={false}
+          fullwidth={true}
+          inverted={false}
+          size="m"
+          type="button"
+          variant="primary"
+          className="contain-center"
+          onClick={() => console.log('redirect')}
+          style={{
+            marginTop: '10px'
+          }}
+        >
+          <GroupuiText className="text-common">
+            Unfallschaden aufnehmen
+          </GroupuiText>
+        </GroupuiButton>
+        
+        <GroupuiButton
+          disabled={false}
+          fullwidth={true}
+          inverted={false}
+          size="m"
+          type="button"
+          variant="primary"
+          className="contain-center"
+          onClick={() => console.log('redirect')}
+          style={{
+            marginTop: '10px',
+            marginBottom: '70px'
+          }}
+        >
+          <GroupuiText className="text-common">
+            Meine Schäden
           </GroupuiText>
         </GroupuiButton>
       </GroupuiModal>
