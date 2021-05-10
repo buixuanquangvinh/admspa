@@ -11,6 +11,7 @@ import {
 import './dashboard.scss'
 // icons
 import CAR_CRASH_24 from '../../icons/car-crash-24.svg'
+import CHECK_24 from '../../icons/check-24.svg'
 
 interface InfiniteCheckList {
   text: string
@@ -20,7 +21,11 @@ interface InfiniteCheckList {
 const CheckList:React.FC<InfiniteCheckList> = ({text}) => {
   return (
     <div className="contain-center" style={{display:'flex', alignItems: 'flex-start'}}>
-      <img style={{color: 'red'}} src="https://groupui-assets.apps.emea.vwapps.io/icons/vwag/check-32.svg" alt="icon-check"/>
+      <img
+        width="24"
+        height="24"
+        src={CHECK_24} alt="icon-check"
+      />
       <GroupuiText
         style={{
           marginLeft: 18,
@@ -35,9 +40,11 @@ const CheckList:React.FC<InfiniteCheckList> = ({text}) => {
   )
 }
 
-export function Dashboard() {
+export function Dashboard(props:any) {
   const { infiniteListState, infiniteListAction  } = useInfiniteList('https://pokeapi.co/api/v2/pokemon')
+
   const [showModal, setShowModal] = useState(false)
+
   return (
     <div
       className="main-container"

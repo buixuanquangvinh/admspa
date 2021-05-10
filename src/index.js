@@ -3,7 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import './configGroupUI'
+import '@sdc-wob-type-3/group-ui/dist/group-ui/assets/themes/vwag/vwag.css';
+
+import { applyPolyfills, defineCustomElements } from '@sdc-wob-type-3/group-ui/dist/loader';
+applyPolyfills().then(() => {
+    defineCustomElements();
+});
 
 ReactDOM.render(
   <React.StrictMode>
