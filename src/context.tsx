@@ -16,7 +16,7 @@ type IAppContext = {
 }
 
 const initialState: IAppState = {
-    authed: localStorage.getItem('token')?true:false,
+    authed: true,
     profile:{}
 };
 
