@@ -11,7 +11,7 @@ import {
 import './dashboard.scss'
 // icons
 import CAR_CRASH_24 from '../../icons/car-crash-24.svg'
-import CHECK_24 from '../../icons/check-24.svg'
+import CHECK_32 from '../../icons/check-32.svg'
 
 interface InfiniteCheckList {
   text: string
@@ -22,17 +22,17 @@ const CheckList:React.FC<InfiniteCheckList> = ({text}) => {
   return (
     <div className="contain-center" style={{display:'flex', alignItems: 'flex-start'}}>
       <img
-        width="24"
-        height="24"
-        src={CHECK_24} alt="icon-check"
+        width="32"
+        height="32"
+        src={CHECK_32} alt="icon-check"
+        color="#20607E"
       />
       <GroupuiText
         style={{
-          marginLeft: 18,
-          marginBottom: 20,
-          marginRight: 20,
-          fontSize: 15,
-          fontWeight: 'bold'
+          margin: '0px 29px 20px 20px',
+          fontSize: 16,
+          color: '#4C5356',
+          letterSpacing: 0.2,
         }}>
         {text}
       </GroupuiText>
@@ -124,18 +124,21 @@ export function Dashboard(props:any) {
         <div style={{textAlign: 'center', marginBottom: 20}}>
           <img
             style={{
-              marginTop: "50px"
+              marginTop: "80px"
             }}
-            width="70"
-            height="70"
+            width="64"
+            height="64"
             src={CAR_CRASH_24} alt="icon-warning"
           />
           <GroupuiText
             style={{
-              fontSize: 26,
+              fontSize: 28,
+              // fontFamily: '',
               fontWeight: 'bold',
-              color: 'var(--groupui-vwag-color-petrol-800-primary)',
-              margin: '20px 0'
+              color: '#20607E',
+              margin: '10px 0 25px 0',
+              lineSpacing: 42,
+              // letterSpacing: 0.2
             }}
           >Unfallhilfe</GroupuiText>
         </div>
@@ -158,7 +161,7 @@ export function Dashboard(props:any) {
           className="contain-center"
           onClick={() => console.log('redirect')}
           style={{
-            marginTop: '10px',
+            marginTop: '25px',
           }}
         >
           <GroupuiText className="text-common">
@@ -176,7 +179,7 @@ export function Dashboard(props:any) {
           className="contain-center"
           onClick={() => console.log('redirect')}
           style={{
-            marginTop: '10px',
+            marginTop: '16px',
           }}
         >
           <GroupuiText className="text-common">
@@ -194,7 +197,7 @@ export function Dashboard(props:any) {
           className="contain-center"
           onClick={() => console.log('redirect')}
           style={{
-            marginTop: '10px'
+            marginTop: '16px',
           }}
         >
           <GroupuiText className="text-common">
@@ -212,8 +215,8 @@ export function Dashboard(props:any) {
           className="contain-center"
           onClick={() => console.log('redirect')}
           style={{
-            marginTop: '10px',
-            marginBottom: '70px'
+            marginTop: '16px',
+            marginBottom: '142px'
           }}
         >
           <GroupuiText className="text-common">
