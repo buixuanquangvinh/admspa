@@ -14,10 +14,7 @@ function LayoutComponent(props:any){
       <div style={{position:'fixed',top:'0',width:'100%'}}>
         <AppHeaderComponent/>
       </div>
-      <div style={{height:'calc(100vh - 8rem)',margin:'4rem 0',paddingTop:'40px'}}>{props.children}</div>
-      <div style={{position:'fixed',bottom:'0',width:'100%'}}>
-        <AppFooterComponent/>
-      </div>
+      <div style={{height:'calc(100vh - 100px)',marginTop:'100px',paddingTop:'40px'}}>{props.children}</div>
     </div>
   )
 }
