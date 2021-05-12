@@ -11,7 +11,7 @@ export function OverView(props:any) {
     let textColor = { color:'var(--groupui-vwag-color-petrol-800-primary)', alignSelf:'center' }
     return (
         <div>
-            <GroupuiText size="caption" weight="bold" style={{marginLeft:'20px'}}>Schadensart melden</GroupuiText>
+            <GroupuiText size="caption" weight="bold" style={{marginLeft:'1.5rem'}}>Schadensart melden</GroupuiText>
             <GroupuiDivider/>
             <div style={{padding:'0px 20px'}}>
                 <div style={customButtonStyle}>
@@ -29,7 +29,7 @@ export function OverView(props:any) {
                 </GroupuiButton>
             </div>
 
-            <GroupuiText size="caption" weight="bold" style={{marginLeft:'20px',marginTop:'2.5rem'}}>Entwürfe</GroupuiText>
+            <GroupuiText size="caption" weight="bold" style={{marginLeft:'1.5rem',marginTop:'2.5rem'}}>Entwürfe</GroupuiText>
             <GroupuiDivider/>
             <div style={{padding:'0px 20px'}}>
                 <div style={{...customButtonStyle,justifyContent:'space-between',padding:'0.5rem 0.25rem 0.75rem 0.25rem'}}>
@@ -42,7 +42,7 @@ export function OverView(props:any) {
             </div>
             <GroupuiDivider/>
 
-            <GroupuiText size="caption" weight="bold" style={{marginLeft:'20px',marginTop:'2.5rem'}}>Gemeldete Schaden</GroupuiText>
+            <GroupuiText size="caption" weight="bold" style={{marginLeft:'1.5rem',marginTop:'2.5rem'}}>Gemeldete Schaden</GroupuiText>
             <GroupuiDivider/>
             <div style={{padding:'0px 20px'}}>
                 <div style={{...customButtonStyle,justifyContent:'space-between',padding:'0.5rem 0.25rem 0.75rem 0.25rem'}}>
