@@ -1,12 +1,16 @@
 import './App.css';
 import { useContext } from 'react';
 import { BrowserRouter as Router, Switch, Route, useRouteMatch } from "react-router-dom";
+import { AppContext, AppContextProvider } from 'context';
+// components
 import { AppHeaderComponent } from 'components/app-header'
 import { AppFooterComponent } from 'components/app-footer'
-import { AppContext, AppContextProvider } from 'context';
-
+// pages
 import { Dashboard } from 'pages/dashboard'
 import { OverView } from 'pages/overview'
+import { EmergencyService } from 'pages/emergency';
+// constants
+import { routes } from 'constants/index'
 
 function LayoutComponent(props:any){
   return(
@@ -27,8 +31,9 @@ function App() {
   return(
     <Router>
       <Switch>
-        <Route path={'/dashboard'} exact={true}  render={(props)=><Dashboard/>}/>
-        <Route path={'/overview'} exact={true} render={props =><LayoutComponent><OverView {...props} /></LayoutComponent>} />
+        <Route path={routes.DASHBOARD} exact={true}  render={(props)=><Dashboard/>}/>
+        <Route path={routes.EMERGENCY_SERVICE} exact={true}  render={(props)=><EmergencyService/>}/>
+        <Route path={routes.OVERVIEW} exact={true} render={props =><LayoutComponent><OverView {...props} /></LayoutComponent>} />
       </Switch>
     </Router>
   )
